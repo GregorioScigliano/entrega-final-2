@@ -156,7 +156,7 @@
     color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    padding: 30px 10px 30px 10px;
+    padding: 20px 10px 30px 10px;
 }
 .mi-p-contacto .mi-span{
     font-weight: bolder;
@@ -258,6 +258,7 @@ form .mi-genero-detalle .categoria{
 #punto-3:checked~.categoria label .tres{
     border-color: #d9d9d9;
     background: black;
+
 }
  form input[type="radio"]{
     display: none;
@@ -282,6 +283,48 @@ form .mi-genero-detalle .categoria{
     background: linear-gradient(-135deg, #E63B2E, #00ffff);
  }
 
+ /* FESTIVALES */
+.mi-container .mi-img{
+    width: 100%;
+    padding: 20px;
+}
+.mi-container .img-fondo{
+    width: 400px;
+    height: 450px;
+}
+.mi-container {
+    background-color: black; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "mi-img1 mi-img1 mi-img1 texto1 texto1"
+      "texto2 texto2 mi-img2 mi-img2 mi-img2"
+      "mi-img3 mi-img3 mi-img3 texto3 texto3"
+      "mi-img4 video video video mi-img5";
+  }
+  .mi-img1 { grid-area: mi-img1; }
+  
+  .texto1 { grid-area: texto1; }
+  
+  .mi-img2 { grid-area: mi-img2; }
+  
+  .texto2 { grid-area: texto2; }
+  
+  .mi-img3 { grid-area: mi-img3; }
+  
+  .texto3 { grid-area: texto3; }
+  
+  .video { grid-area: video; }
+  
+  .mi-img4 { grid-area: mi-img4; }
+  
+  .mi-img5 { grid-area: mi-img5; }
+  
+
 
 @media(min-width:600px){
     .titulo-pagina{
@@ -293,14 +336,4 @@ form .mi-genero-detalle .categoria{
     .mi-p{
         font-size: 25px;
     }
-}
-@media(min-with:712px){
-    /* .mi-formulario{
-        max-width: 100%;
-    } */
-    form .mi-detalle-usuario .mi-input-box{
-        margin-bottom: 15px;
-    width: calc(100% / 2 - 20px);
-    }
-
 }
