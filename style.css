@@ -143,6 +143,68 @@
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
 }
+
+/* CONTACTO */
+.mi-main-contacto{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    background-color: black;
+    /* background: linear-gradient(135deg,#E63B2E,#ffa500); */
+}
+.mi-formulario{
+    max-width: 700px;
+    width: 100%;
+    background: linear-gradient(135deg,#E63B2E,#ffa500);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.mi-formulario .titulo-mi-formulario{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.mi-formulario .titulo-mi-formulario::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #00ffff);
+}
+.mi-formulario form .mi-detalle-usuario{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 12px 0;
+}
+form .mi-detalle-usuario .mi-input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.mi-detalle-usuario .mi-input-box .mi-detalle{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+.mi-detalle-usuario .mi-input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.mi-detalle-usuario .mi-input-box input:focus,
+.mi-detalle-usuario .mi-input-box input:valid{
+    border-color: #00ffff;
+}
 @media(min-width:600px){
     .titulo-pagina{
         font-size: 90px;
