@@ -99,22 +99,8 @@
     height: 50px;
 }
 
-@keyframes titulo-pagina{
-    0% {
-        color: black;
-    }
-    40%{
-        color: #ffa500;
-    }
-    80%{
-        color: #00ffff;
-    }
-    100%{
-        color: black;
-    }
-}
-
 /* BANDAS */
+/* arreglar imagenes para que sean mas resposive, mas o menos tengo una idea, ver de manipular el contenedor o de trabajar con las opciones que da boostrap */
 .banda-mi-main{
     background-color: black;
     margin: 0px;
@@ -150,6 +136,7 @@
 }
 
 /* CONTACTO */
+/* arreglar despues el tema de que sea responsive, ya mas o menos tengo una idea, probar como hicimos en festivales. */
 .mi-p-contacto{
     background-color:black ;
     font-size: 30px;
@@ -284,7 +271,19 @@ form .mi-genero-detalle .categoria{
  }
 
  /* FESTIVALES */
-.mi-container .mi-img{
+ .mi-container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+ }
+ .mi-container .mi-img{
+    width: 100%;
+    height: 450px;
+ }
+ .mi-container .mi-img4, .mi-img5{
+    display: none;
+ }
+/* .mi-container .mi-img{
     width: 100%;
     padding: 20px;
 }
@@ -322,11 +321,145 @@ form .mi-genero-detalle .categoria{
   
   .mi-img4 { grid-area: mi-img4; }
   
-  .mi-img5 { grid-area: mi-img5; }
+  .mi-img5 { grid-area: mi-img5; } */
   
+/* medias querys para festivales 
+en 1200px se empieza a romper*/
 
+/* ENCUENTRA 
+despues ver lo de responsive de la misma manera que hicimos con contacto.*/
+.mi-p-encuentra{
+    background-color:black ;
+    font-size: 30px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 20px 10px 30px 10px;
+}
+.mi-formulario-encuentra{
+    max-width: 700px;
+    width: 100%;
+    background: linear-gradient(135deg,#E63B2E,#ffa500);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.mi-formulario-encuentra .titulo-mi-formulario{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+.mi-formulario-encuentra .titulo-mi-formulario::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg,#ffa500, #E63B2E);
+}
+.mi-formulario-encuentra form .mi-detalle-usuario{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 12px 0;
+}
+.mi-formulario-encuentra form .mi-detalle-usuario-encuentra {
+    display: flex;
+    margin: 20px 0 12px 0;
+    align-items: center;
+    flex-direction: column;
+}
+.mi-main-encuentra{
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    background-color: black;
+}
+form .boton-form-encuentra{
+    height: 45px;
+    margin: 45px 0;
+    font-family: 'Poppins', sans-serif;
+ }
+ form .boton-form-encuentra input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(to left, #E63B2E,#ffa500 );
+ }
+ form .boton-form-encuentra input:hover{
+    background: linear-gradient(to right, #E63B2E,#ffa500 );
+ }
 
-@media(min-width:600px){
+@keyframes titulo-pagina{
+    0% {
+        color: black;
+    }
+    40%{
+        color: #ffa500;
+    }
+    80%{
+        color: #00ffff;
+    }
+    100%{
+        color: black;
+    }
+}
+@media(min-width:1200px){
+    /* .mi-container{
+        display: flex;
+    } */
+    .mi-container .mi-img{
+        width: 100%;
+        padding: 20px;
+    }
+    .mi-container .mi-img4, .mi-img5{
+        display: contents;
+     }
+    .mi-container .img-fondo{
+        width: 400px;
+        height: 450px;
+    }
+    .mi-container {
+        background-color: black; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "mi-img1 mi-img1 mi-img1 texto1 texto1"
+          "texto2 texto2 mi-img2 mi-img2 mi-img2"
+          "mi-img3 mi-img3 mi-img3 texto3 texto3"
+          "mi-img4 video video video mi-img5";
+      }
+      .mi-img1 { grid-area: mi-img1; }
+      
+      .texto1 { grid-area: texto1; }
+      
+      .mi-img2 { grid-area: mi-img2; }
+      
+      .texto2 { grid-area: texto2; }
+      
+      .mi-img3 { grid-area: mi-img3; }
+      
+      .texto3 { grid-area: texto3; }
+      
+      .video { grid-area: video; }
+      
+      .mi-img4 { grid-area: mi-img4; }
+      
+      .mi-img5 { grid-area: mi-img5; }
+}
+@media(min-width:700px){
     .titulo-pagina{
         font-size: 90px;
     }
