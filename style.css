@@ -294,3 +294,13 @@ form .mi-genero-detalle .categoria{
         font-size: 25px;
     }
 }
+@media(min-with:712px){
+    /* .mi-formulario{
+        max-width: 100%;
+    } */
+    form .mi-detalle-usuario .mi-input-box{
+        margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+    }
+
+}
