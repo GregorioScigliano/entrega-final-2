@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Poppins:ital,wght@0,200;0,400;1,200&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 /* paleta de colores
 #000000 negro
 #ffa500 naranja
@@ -145,6 +150,18 @@
 }
 
 /* CONTACTO */
+.mi-p-contacto{
+    background-color:black ;
+    font-size: 30px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 30px 10px 30px 10px;
+}
+.mi-p-contacto .mi-span{
+    font-weight: bolder;
+    text-decoration: underline;
+}
 .mi-main-contacto{
     display: flex;
     flex-direction: column;
@@ -166,6 +183,7 @@
     font-size: 25px;
     font-weight: 500;
     position: relative;
+    font-family: 'Poppins', sans-serif;
 }
 .mi-formulario .titulo-mi-formulario::before{
     content: '';
@@ -174,7 +192,7 @@
     bottom: 0;
     height: 3px;
     width: 30px;
-    background: linear-gradient(135deg, #00ffff);
+    background: linear-gradient(135deg,#ffa500, #E63B2E);
 }
 .mi-formulario form .mi-detalle-usuario{
     display: flex;
@@ -184,11 +202,14 @@
 form .mi-detalle-usuario .mi-input-box{
     margin-bottom: 15px;
     width: calc(100% / 2 - 20px);
+    padding: 15px;
 }
-.mi-detalle-usuario .mi-input-box .mi-detalle{
+.mi-detalle-usuario .mi-input-box .mi-detalles{
     font-weight: 500;
     margin-bottom: 5px;
     display: block;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 .mi-detalle-usuario .mi-input-box input{
     height: 45px;
@@ -205,6 +226,63 @@ form .mi-detalle-usuario .mi-input-box{
 .mi-detalle-usuario .mi-input-box input:valid{
     border-color: #00ffff;
 }
+form .mi-genero-detalle .genero-palabra{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+form .mi-genero-detalle .categoria{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.mi-genero-detalle .categoria label{
+    display: flex;
+    align-items: center;
+}
+.mi-genero-detalle .categoria .genero{
+    font-family: 'Poppins', sans-serif;
+}
+.mi-genero-detalle .categoria .punto{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#punto-1:checked~.categoria label .uno,
+#punto-2:checked~.categoria label .dos,
+#punto-3:checked~.categoria label .tres{
+    border-color: #d9d9d9;
+    background: black;
+}
+ form input[type="radio"]{
+    display: none;
+ }
+ form .boton-form{
+    height: 45px;
+    margin: 45px 0;
+    font-family: 'Poppins', sans-serif;
+ }
+ form .boton-form input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: antiquewhite;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #00ffff, #E63B2E );
+ }
+ form .boton-form input:hover{
+    background: linear-gradient(-135deg, #E63B2E, #00ffff);
+ }
+
+
 @media(min-width:600px){
     .titulo-pagina{
         font-size: 90px;
